@@ -58,6 +58,7 @@
                                         <connections>
                                             <outlet property="recipeImg" destination="kf0-ZU-uYH" id="Gd8-db-yJo"/>
                                             <outlet property="recipeTitle" destination="k7t-oc-MgR" id="285-hK-gyb"/>
+                                            <segue destination="RPO-PA-ChQ" kind="show" identifier="ShowDetail" id="5Io-Fy-LAg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -292,7 +293,219 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sgL-Gf-LwB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1942" y="409"/>
+            <point key="canvasLocation" x="1948" y="-45"/>
+        </scene>
+        <!--Recipe DetailVC-->
+        <scene sceneID="NR1-1e-HkQ">
+            <objects>
+                <viewController id="RPO-PA-ChQ" customClass="RecipeDetailVC" customModule="MyRecipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fxf-jr-qbp"/>
+                        <viewControllerLayoutGuide type="bottom" id="vMv-hV-Is2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QhE-2b-IcE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeP-LE-pdk">
+                                <rect key="frame" x="159" y="72" width="257" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="LZI-nW-a1j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="LZI-nW-a1j"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="278" y="82" width="302" height="21"/>
+                                    <mask key="constraints">
+                                        <include reference="LZI-nW-a1j"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="72" width="360" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAc-Qs-dIa">
+                                <rect key="frame" x="159" y="101" width="257" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="nnF-Hp-l6U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="nnF-Hp-l6U"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="278" y="111" width="302" height="21"/>
+                                    <mask key="constraints">
+                                        <include reference="nnF-Hp-l6U"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="101" width="360" height="21"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ddl-Zi-MWG">
+                                <rect key="frame" x="167" y="159" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="DFY-ji-tcw"/>
+                                    <constraint firstAttribute="width" constant="250" id="Ydk-58-Ao0">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="250"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="250" id="hD2-YJ-1We"/>
+                                    <constraint firstAttribute="height" constant="250" id="o3t-VE-iqL"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DFY-ji-tcw"/>
+                                        <exclude reference="Ydk-58-Ao0"/>
+                                        <exclude reference="hD2-YJ-1We"/>
+                                        <exclude reference="o3t-VE-iqL"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="82" width="250" height="250"/>
+                                    <mask key="constraints">
+                                        <include reference="hD2-YJ-1We"/>
+                                        <include reference="o3t-VE-iqL"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="50" y="159" width="300" height="300"/>
+                                    <mask key="constraints">
+                                        <include reference="DFY-ji-tcw"/>
+                                        <include reference="Ydk-58-Ao0"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Steps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxa-bq-Byb">
+                                <rect key="frame" x="159" y="130" width="257" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="EuQ-dr-tyr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="EuQ-dr-tyr"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="278" y="140" width="302" height="21"/>
+                                    <mask key="constraints">
+                                        <include reference="EuQ-dr-tyr"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="130" width="360" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QeP-LE-pdk" firstAttribute="trailing" secondItem="QhE-2b-IcE" secondAttribute="trailingMargin" id="18H-rg-9V6"/>
+                            <constraint firstItem="QeP-LE-pdk" firstAttribute="trailing" secondItem="QhE-2b-IcE" secondAttribute="trailingMargin" id="7u3-Du-Lz5"/>
+                            <constraint firstItem="QeP-LE-pdk" firstAttribute="top" secondItem="fxf-jr-qbp" secondAttribute="bottom" constant="8" id="FEU-h4-sLE"/>
+                            <constraint firstItem="QeP-LE-pdk" firstAttribute="leading" secondItem="ddl-Zi-MWG" secondAttribute="trailing" constant="8" id="Gyp-oq-3vC"/>
+                            <constraint firstItem="wxa-bq-Byb" firstAttribute="leading" secondItem="QhE-2b-IcE" secondAttribute="leadingMargin" id="Syy-ms-9bf"/>
+                            <constraint firstItem="HAc-Qs-dIa" firstAttribute="top" secondItem="QeP-LE-pdk" secondAttribute="bottom" constant="8" id="UIW-4p-7Dx"/>
+                            <constraint firstItem="wxa-bq-Byb" firstAttribute="leading" secondItem="ddl-Zi-MWG" secondAttribute="trailing" constant="8" id="UM2-QT-dqP"/>
+                            <constraint firstItem="ddl-Zi-MWG" firstAttribute="centerY" secondItem="QhE-2b-IcE" secondAttribute="centerY" id="WqY-wr-pos"/>
+                            <constraint firstItem="wxa-bq-Byb" firstAttribute="top" secondItem="HAc-Qs-dIa" secondAttribute="bottom" constant="8" id="YHh-gV-0MO"/>
+                            <constraint firstItem="wxa-bq-Byb" firstAttribute="trailing" secondItem="QhE-2b-IcE" secondAttribute="trailingMargin" id="aeP-Zb-xbp"/>
+                            <constraint firstItem="QeP-LE-pdk" firstAttribute="leading" secondItem="QhE-2b-IcE" secondAttribute="leadingMargin" id="dtq-H7-iT4"/>
+                            <constraint firstItem="HAc-Qs-dIa" firstAttribute="leading" secondItem="ddl-Zi-MWG" secondAttribute="trailing" constant="8" id="fJg-3K-Ff0"/>
+                            <constraint firstItem="HAc-Qs-dIa" firstAttribute="trailing" secondItem="QhE-2b-IcE" secondAttribute="trailingMargin" id="jgC-7b-BJK"/>
+                            <constraint firstItem="HAc-Qs-dIa" firstAttribute="trailing" secondItem="QhE-2b-IcE" secondAttribute="trailingMargin" id="lei-aJ-dIT"/>
+                            <constraint firstItem="HAc-Qs-dIa" firstAttribute="leading" secondItem="QhE-2b-IcE" secondAttribute="leadingMargin" id="mqK-x5-BhF"/>
+                            <constraint firstItem="ddl-Zi-MWG" firstAttribute="leading" secondItem="QhE-2b-IcE" secondAttribute="leadingMargin" id="o0e-WW-i6Z"/>
+                            <constraint firstItem="ddl-Zi-MWG" firstAttribute="centerX" secondItem="QhE-2b-IcE" secondAttribute="centerX" id="oHX-3r-QeR"/>
+                            <constraint firstItem="wxa-bq-Byb" firstAttribute="top" secondItem="HAc-Qs-dIa" secondAttribute="bottom" constant="8" id="qT7-jZ-HVj"/>
+                            <constraint firstItem="ddl-Zi-MWG" firstAttribute="top" secondItem="wxa-bq-Byb" secondAttribute="bottom" constant="8" id="rjz-vZ-2CD">
+                                <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                            </constraint>
+                            <constraint firstItem="wxa-bq-Byb" firstAttribute="trailing" secondItem="QhE-2b-IcE" secondAttribute="trailingMargin" id="uzB-uK-C18"/>
+                            <constraint firstItem="HAc-Qs-dIa" firstAttribute="top" secondItem="QeP-LE-pdk" secondAttribute="bottom" constant="8" id="vl8-xw-4Od"/>
+                            <constraint firstItem="QeP-LE-pdk" firstAttribute="top" secondItem="fxf-jr-qbp" secondAttribute="bottom" constant="18" id="xRn-xL-krk">
+                                <variation key="heightClass=compact" constant="25"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="WqY-wr-pos"/>
+                                <exclude reference="o0e-WW-i6Z"/>
+                                <exclude reference="oHX-3r-QeR"/>
+                                <exclude reference="rjz-vZ-2CD"/>
+                                <exclude reference="18H-rg-9V6"/>
+                                <exclude reference="7u3-Du-Lz5"/>
+                                <exclude reference="FEU-h4-sLE"/>
+                                <exclude reference="Gyp-oq-3vC"/>
+                                <exclude reference="dtq-H7-iT4"/>
+                                <exclude reference="xRn-xL-krk"/>
+                                <exclude reference="UIW-4p-7Dx"/>
+                                <exclude reference="fJg-3K-Ff0"/>
+                                <exclude reference="jgC-7b-BJK"/>
+                                <exclude reference="lei-aJ-dIT"/>
+                                <exclude reference="mqK-x5-BhF"/>
+                                <exclude reference="vl8-xw-4Od"/>
+                                <exclude reference="Syy-ms-9bf"/>
+                                <exclude reference="UM2-QT-dqP"/>
+                                <exclude reference="YHh-gV-0MO"/>
+                                <exclude reference="aeP-Zb-xbp"/>
+                                <exclude reference="qT7-jZ-HVj"/>
+                                <exclude reference="uzB-uK-C18"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="WqY-wr-pos"/>
+                                <include reference="o0e-WW-i6Z"/>
+                                <include reference="18H-rg-9V6"/>
+                                <exclude reference="Gyp-oq-3vC"/>
+                                <include reference="xRn-xL-krk"/>
+                                <exclude reference="fJg-3K-Ff0"/>
+                                <include reference="jgC-7b-BJK"/>
+                                <include reference="vl8-xw-4Od"/>
+                                <exclude reference="UM2-QT-dqP"/>
+                                <include reference="qT7-jZ-HVj"/>
+                                <include reference="uzB-uK-C18"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="oHX-3r-QeR"/>
+                                <include reference="rjz-vZ-2CD"/>
+                                <include reference="7u3-Du-Lz5"/>
+                                <include reference="FEU-h4-sLE"/>
+                                <include reference="dtq-H7-iT4"/>
+                                <include reference="UIW-4p-7Dx"/>
+                                <include reference="lei-aJ-dIT"/>
+                                <include reference="mqK-x5-BhF"/>
+                                <include reference="Syy-ms-9bf"/>
+                                <include reference="YHh-gV-0MO"/>
+                                <include reference="aeP-Zb-xbp"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="recipeImage" destination="ddl-Zi-MWG" id="3PR-OM-UKJ"/>
+                        <outlet property="recipeIngredients" destination="HAc-Qs-dIa" id="6sP-WX-8Bo"/>
+                        <outlet property="recipeSteps" destination="wxa-bq-Byb" id="NjF-PI-5rD"/>
+                        <outlet property="recipeTitle" destination="QeP-LE-pdk" id="PQE-10-YKj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q63-XW-k9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1947" y="699"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bdH-zp-f7X">
@@ -317,4 +530,5 @@
     <resources>
         <image name="foodsushi" width="600" height="403"/>
     </resources>
+    <color key="tintColor" red="0.89803922179999995" green="0.2941176593" blue="0.24313725529999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>

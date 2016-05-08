@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class CreateRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CreateRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var recipeTitle: UITextField!
     @IBOutlet weak var recipeIngredients: UITextField!
@@ -22,10 +22,19 @@ class CreateRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        recipeTitle.delegate = self
+        recipeIngredients.delegate = self
+        recipeSteps.delegate = self
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         recipeImg.layer.cornerRadius = 7.0
         recipeImg.clipsToBounds = true
+
+    }
+    
+    func textFieldShouldReturn(userText: UITextField) -> Bool {
+        userText.resignFirstResponder()
+        return true;
     }
 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {

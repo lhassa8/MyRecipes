@@ -17,6 +17,7 @@
 		CE42E08E1CDEF0CA0022487A /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42E08C1CDEF0CA0022487A /* Recipe.swift */; };
 		CE42E0901CDFA5870022487A /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42E08F1CDFA5870022487A /* RecipeCell.swift */; };
 		CE42E0921CDFABCF0022487A /* CreateRecipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42E0911CDFABCF0022487A /* CreateRecipeVC.swift */; };
+		CE42E0941CDFE0FA0022487A /* RecipeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42E0931CDFE0FA0022487A /* RecipeDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CE42E08C1CDEF0CA0022487A /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recipe.swift; path = ../Recipe.swift; sourceTree = "<group>"; };
 		CE42E08F1CDFA5870022487A /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		CE42E0911CDFABCF0022487A /* CreateRecipeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRecipeVC.swift; sourceTree = "<group>"; };
+		CE42E0931CDFE0FA0022487A /* RecipeDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				CE42E0751CDEE66A0022487A /* ViewController.swift */,
 				CE42E0911CDFABCF0022487A /* CreateRecipeVC.swift */,
+				CE42E0931CDFE0FA0022487A /* RecipeDetailVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				CE42E07C1CDEE66A0022487A /* MyRecipes.xcdatamodeld in Sources */,
 				CE42E08D1CDEF0CA0022487A /* Recipe+CoreDataProperties.swift in Sources */,
 				CE42E0761CDEE66A0022487A /* ViewController.swift in Sources */,
+				CE42E0941CDFE0FA0022487A /* RecipeDetailVC.swift in Sources */,
 				CE42E0901CDFA5870022487A /* RecipeCell.swift in Sources */,
 				CE42E0921CDFABCF0022487A /* CreateRecipeVC.swift in Sources */,
 				CE42E0741CDEE66A0022487A /* AppDelegate.swift in Sources */,
@@ -332,6 +336,7 @@
 				CE42E0871CDEE66A0022487A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

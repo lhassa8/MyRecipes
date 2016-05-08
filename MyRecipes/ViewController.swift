@@ -43,7 +43,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
 
-    // these three are reuired for tableview
+    // these three are required for tableview
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("RecipeCell") as? RecipeCell {
@@ -63,6 +63,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipes.count
     }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if let identifier = segue.identifier {
+            
+            switch identifier {
+                case "ShowDetail":
+                
+                    let recipeDetailVC = segue.destinationViewController as? RecipeDetailVC
+                    if let indexPath = self.tableView.indexPathForCell((sender as? UITableViewCell)!) {
+                        recipeDetailVC?.recipe = recipes[indexPath.row]
+                }
+                
+                
+            default: break
+            }
+            
+        }
+        
+    }
+    
     
 }
 
